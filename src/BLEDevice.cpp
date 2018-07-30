@@ -30,6 +30,14 @@
 #include "esp32-hal-log.h"
 #endif
 
+#ifdef CONFIG_BLE_SMP_ENABLE
+#undef CONFIG_BLE_SMP_ENABLE
+#endif
+
+#ifdef CONFIG_GATTC_ENABLE
+#undef CONFIG_GATTC_ENABLE
+#endif
+
 static const char* LOG_TAG = "BLEDevice";
 
 /**
